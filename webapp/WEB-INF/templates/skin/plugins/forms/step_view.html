@@ -38,6 +38,17 @@ else {
 }
 }
 </script>
+<noscript>
+	<style>
+		#form-validate,
+		#upload-info-message {
+			display: none;
+		}
+	</style>
+	<div class="alert alert-warning fs-5" role="alert">
+		#i18n{forms.message.javascript.required}
+	</div>
+</noscript>
 <form id="form-validate" action="jsp/site/Portal.jsp?page=forms" method="post" enctype="multipart/form-data">
 	<#if form.logo??>
 		<img id="form_logo" src="data:${form.logo.mimeType};base64,${form.logoBase64}" title="${form.title}" alt=""/>
